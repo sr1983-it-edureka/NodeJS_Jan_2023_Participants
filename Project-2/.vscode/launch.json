@@ -1,0 +1,17 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Project-2 Debugger",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "C:\\Users\\sr198\\Git\\Edureka\\NodeJS_Jan_2023\\NodeJS_Jan_2023_Participants\\Project-2\\string-demo1.js"
+    }
+  ]
+}

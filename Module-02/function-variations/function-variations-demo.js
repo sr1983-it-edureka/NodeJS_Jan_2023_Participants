@@ -26,7 +26,7 @@ function readFileHandler(error, contents){
     console.log(contents);
   }
 }
-fs.readFile(filename, "utf-8", readFileHandler);
+//fs.readFile(filename, "utf-8", readFileHandler);
 // Reading from from myTable2.json
 
 
