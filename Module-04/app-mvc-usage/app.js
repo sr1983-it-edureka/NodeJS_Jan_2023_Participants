@@ -12,11 +12,13 @@ const app = express();
 app.use(taskRouter);
 app.use(userRouter.userRouter);
 
-const PORT = 8888;
+const PORT = process.env.PORT || 8081 
+
 app.listen(PORT, () => {
   console.log(`Server started and running at port ${PORT}`);
 })
 
+/*
 
 fetch("")
 .then()
@@ -56,3 +58,5 @@ const e2 = {
 const allEmployes = [e1, e2];
 
 find
+
+*/
