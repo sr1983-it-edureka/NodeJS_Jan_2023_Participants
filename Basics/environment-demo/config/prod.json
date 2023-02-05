@@ -1,0 +1,10 @@
+{
+  "MONGODB_URL" : "mongodb+srv://machine.remote.com:mypassword@localhost/prod",
+  "PORT" : 8081,
+  "logging" : false,
+  
+  "email" : {
+    "server" : "prod.emailserver",
+    "port" : 7777
+  }  
+}

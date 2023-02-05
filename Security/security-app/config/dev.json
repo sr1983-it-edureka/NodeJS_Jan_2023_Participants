@@ -1,0 +1,4 @@
+{
+  "MONGODB_URL" : "mongodb+srv://root:mypassword@cluster1.6ygaca6.mongodb.net/demo?retryWrites=true&w=majority"
+
+}

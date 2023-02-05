@@ -1,0 +1,9 @@
+{
+  "MONGODB_URL" : "mongodb+srv://root:mypassword@localhost/dev",
+  "PORT" : 8888,
+  "logging" : true,
+  "email" : {
+    "server" : "devemailserver",
+    "port" : 12345
+  }
+}

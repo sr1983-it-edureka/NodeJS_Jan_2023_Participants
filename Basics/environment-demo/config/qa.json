@@ -1,0 +1,5 @@
+{
+  "MONGODB_URL" : "mongodb+srv://root:mypassword@qa-environment-common/qa",
+  "PORT" : 8889,
+  "logging" : false
+}
