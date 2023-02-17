@@ -1,0 +1,20 @@
+{
+
+  "devDependencies": {
+    "jest": "^29.4.2"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "mongoose": "^6.9.1"
+  },
+  "name": "unit-testing-demo",
+  "version": "1.0.0",
+  "main": "employee.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

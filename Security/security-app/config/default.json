@@ -1,4 +1,6 @@
 {
   "MONGODB_URL" : "mongodb+srv://root:mypassword@cluster1.6ygaca6.mongodb.net/demo?retryWrites=true&w=majority",
-  "SECRET_KEY" : "12345ABCDEF"
+  "SECRET_KEY" : "12345ABCDEF",
+
+  "RP_PAY" : "123ABCS"
 }

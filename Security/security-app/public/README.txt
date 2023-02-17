@@ -1,0 +1,1 @@
+This file demonstrate the usage of accessing content available in the public folder

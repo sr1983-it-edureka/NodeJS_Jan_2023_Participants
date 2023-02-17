@@ -1,0 +1,101 @@
+
+<html>
+
+  <style>
+
+    .sign-up{
+
+      width: 400px;
+      padding: 100px;
+      background: lightblue;
+      border-radius: 15px;
+    }
+  </style>
+
+  <body>
+
+
+    <div class="sign-up">
+
+        <form>
+       
+          <label for="username">Username:</label>
+          <input type="text" name="username"/> 
+          <br><br>
+
+          <label for="password">Password:</label>
+          <input type="password" name="password"/>
+          <br><br>
+          
+          <div class="errorMessages">
+          </div>
+          <br><br>
+
+          <input type="submit" value="Sign up" />
+          
+        </form>
+
+    </div>
+
+
+  </body>
+
+  <script>
+
+    const form = document.querySelector("form");
+    const errorMessages = document.querySelector(".errorMessages");
+
+
+    form.addEventListener("submit", async (event) => {
+
+      event.preventDefault();
+
+      const username = form.username.value;
+      const password = form.password.value;
+
+      console.log(`Username is ${username} and password is ${password}`);
+
+      const reqBody = {
+          username : username,
+          password : password
+      }
+
+      try{
+          const response = await fetch("/auth/sign-up", {
+          method: 'POST',
+          body: JSON.stringify(reqBody),
+          headers : {
+            'Content-Type' : 'application/json'
+          }
+        })
+        
+        const data = await response.json();
+
+        console.log("Status code is " + response.status);
+
+        console.log(`Data is ${JSON.stringify(data)}`);
+
+        if (response.status == 400){
+
+          errorMessages.textContent = JSON.stringify(data);
+
+        }else{
+
+          // Show protected resources
+          location.assign("/tasks")        
+
+        }
+
+
+      }catch (error){
+
+        console.log(error);
+
+        errorMessages.textContent = JSON.stringify(error);        
+      }
+
+    })
+
+  </script>
+
+</html>

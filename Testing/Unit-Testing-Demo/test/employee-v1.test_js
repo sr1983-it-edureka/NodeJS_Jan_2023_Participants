@@ -1,0 +1,45 @@
+const employee = require("../employee");
+
+test("Calculate Bonus for a 5 rating employee and projects count more than 10", () => {
+  const john = {
+    rating: 5,
+    noOfProjects: 11
+  }
+
+  const result = employee.calculateBonus(john);
+  expect(result).toBe(25);
+})
+
+test("Calculate Bonus for a 5 rating employee and projects count less than 10", () => {
+  const john = {
+    rating: 5,
+    noOfProjects: 7
+  }
+
+  const result = employee.calculateBonus(john);
+  expect(result).toBe(21);
+})
+
+
+test("calculate Bonus for a 3 * rating employee", () => {
+
+  const john = {
+    rating: 3
+  }
+
+  const result = employee.calculateBonus(john);
+  expect(result).toBe(15);
+    
+})
+
+
+test("calculate Bonus for a 1 * rating employee", () => {
+
+  const john = {
+    rating: 1
+  }
+
+  const result = employee.calculateBonus(john);
+  expect(result).toBe(5);
+    
+})
