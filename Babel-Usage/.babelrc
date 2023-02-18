@@ -1,0 +1,17 @@
+{
+  "presets": [
+    ["@babel/env", {
+      "targets" : {
+        "node" : "current"
+      }}]
+  ],
+
+  "plugins" : [
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-object-rest-spread"
+  ]
+}
+
+// Feature - Adding spread operator support
+// 2022 - Feature - Feature-X
+// 2023 - Feature - Feature-Y

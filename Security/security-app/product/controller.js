@@ -6,7 +6,11 @@ const getAllProducts = (req, res) => {
     {id: 2, name : 'Samsung Mobile', description: 'Samsung Mobile'}, 
   ]
 
-  res.send(allProducts);
+  // res.send(allProducts);
+  res.render("products", {
+    // allProducts : allProducts
+    allProducts
+  })
 }
 
 module.exports = {getAllProducts};
