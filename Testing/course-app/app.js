@@ -144,3 +144,5 @@ app.listen(port, (error) => {
   }
 });
 
+module.exports = app
+

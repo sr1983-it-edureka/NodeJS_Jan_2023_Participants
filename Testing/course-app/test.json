@@ -1,0 +1,19 @@
+Res {
+  "req": {
+    "method": "get",
+    "url": "http://127.0.0.1:52776/courses/list",
+    "headers": {
+      "user-agent": "node-superagent/3.8.3"
+    }
+  },
+  "header": {
+    "x-powered-by": "Express",
+    "content-type": "application/json; charset=utf-8",
+    "content-length": "231",
+    "etag": "W/\"e7-chPFI2vCVrqYJpq2SLJnUzLcv/g\"",
+    "date": "Sun, 19 Feb 2023 03:03:53 GMT",
+    "connection": "close"
+  },
+  "status": 200,
+  "text": "[{\"id\":1,\"name\":\"Full stack Web Developers Program\",\"duration\":\"3 Months\",\"rating\":4.3},{\"id\":2,\"name\":\"AWS Certification Program\",\"duration\":\"6 Months\",\"rating\":4.5},{\"id\":3,\"name\":\"MERN Stack\",\"duration\":\"5 Months\",\"rating\":4.1}]"
+}

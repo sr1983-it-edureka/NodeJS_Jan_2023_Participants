@@ -1,0 +1,44 @@
+
+<html>
+
+
+  <body>
+
+      <%- include('header'); %>
+
+      <p>This is my first EJS</p>
+
+      <p><%= appTitle %> </p>
+
+      <% const isAdminUser = false;
+      if (isAdminUser){ %>
+        <p>The logged in user is an admin user</p>
+      <% }else{ %>
+        <p>The logged in user is a regular/standard user</p>
+      <% } %>
+
+      <p>4 Directions</p>
+      <ul>
+        <li>North</li>
+        <li>South</li>
+        <li>East</li>
+        <li>West</li>
+      </ul>
+
+
+      <p>My Fav Movies</p>
+      <ul>
+
+        <% favMovies.forEach( (movie) => { %>
+          <li>
+            <%= movie %>
+          </li>
+        <% }) %>
+
+      </ul>
+
+      <%- include('footer'); %>
+
+  </body>
+
+</html>
