@@ -1,10 +1,27 @@
 
-require("dotenv").config();
+const express = require("express");
 
-const dbUrl = process.env.MONGODB_DB_URL;
-const username = process.env.MONGODB_USERNAME;
-const password = process.env.MONGODB_PASSWORD;
+const app = express();
 
-console.log(dbUrl);
-console.log(username);
-console.log(password);
+app.set("view engine", "ejs");
+
+const data = {
+  username : 'raj',
+  appTitle : "NodeJS - EJS Application Demo",
+  favMovies : [
+    "Harry Potter", "Rebecca", "The Usual Suspects"
+  ]
+}
+
+app.get("/", (req, res) => {
+
+  res.render("hello", data);
+
+})
+
+const port = process.env.PORT;
+
+app.listen(port, () => {
+  console.log(`Server started and running in port ${port}`);
+})
+
