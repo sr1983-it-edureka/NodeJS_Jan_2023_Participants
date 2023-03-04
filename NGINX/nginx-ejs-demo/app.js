@@ -6,6 +6,7 @@ const app = express();
 app.set("view engine", "ejs");
 
 const data = {
+  port : process.env.PORT,
   username : 'raj',
   appTitle : "NodeJS - EJS Application Demo",
   favMovies : [
