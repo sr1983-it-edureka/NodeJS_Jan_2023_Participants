@@ -1,0 +1,58 @@
+
+<html>
+
+  <body>
+
+    <h2>Web Sockets - Demo</h2>
+
+    <textarea id = "messages" rows="30" cols="70"></textarea>
+    <br><br>
+
+    <input type="text" id="messageBox" placeholder="Type your message here" style="width: 500px;">
+    <br><br>
+
+    <button id="send" title="Send">
+      Send Message
+    </button>
+
+  </body>
+
+  <script>
+
+    const ws = new WebSocket("ws://localhost:9999");
+
+    const sendButton = document.getElementById("send");
+    const messageBoxTextField = document.getElementById("messageBox");
+    const messagesTextArea = document.getElementById("messages");
+
+    ws.onopen = () => {
+      console.log("Connected successfully to Server");
+    }
+
+    ws.onmessage = (messsageEvent) => {
+      const data = messsageEvent.data;
+      populateInTextArea('YOU ->' + data);
+    }
+
+    sendButton.onclick = function() {
+
+      const message = `${messageBoxTextField.value}`;
+
+      ws.send(message);
+      populateInTextArea('ME ->' + message);
+    }
+
+
+    function populateInTextArea(message){
+
+      let tempContent = messagesTextArea.textContent;
+
+      tempContent += "\n" + message;
+      messagesTextArea.textContent = tempContent;
+
+      messageBoxTextField.value = "";
+    }
+
+  </script>
+
+</html>
